@@ -1006,13 +1006,13 @@
         = COUNTDOWN CLOCK
     -------------------------------------------*/
     if ($("#clock").length) {
-        $('#clock').countdown('2024-11-30 20:30:00', function (event) {
+        $('#clock').countdown('2024-08-17 6:00:00', function (event) {
             var $this = $(this).html(event.strftime(''
                 // + '<div class="box"><div><div class="time">%m</div> <span>Month</span> </div></div>'
-                + '<div class="box"><div><div class="time">%D</div> <span>Days</span> </div></div>'
-                + '<div class="box"><div><div class="time">%H</div> <span>Hours</span> </div></div>'
-                + '<div class="box"><div><div class="time">%M</div> <span>Mins</span> </div></div>'
-                + '<div class="box"><div><div class="time">%S</div> <span>Secs</span> </div></div>'));
+                + '<div class="box"><div><div class="time">%D</div> <span>Días</span> </div></div>'
+                + '<div class="box"><div><div class="time">%H</div> <span>Horas</span> </div></div>'
+                + '<div class="box"><div><div class="time">%M</div> <span>Minutos</span> </div></div>'
+                + '<div class="box"><div><div class="time">%S</div> <span>Segundos</span> </div></div>'));
         });
     }
     /*------------------------------------------

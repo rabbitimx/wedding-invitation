@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/invitaciones', [LandingController::class, 'invitations']);
 
 Route::get('/', [LandingController::class, 'index']);
+Route::get('/{key}', [LandingController::class, 'index'])->name('invitation');
+Route::post('/{key}', [LandingController::class, 'confirmInvitee']);
 
