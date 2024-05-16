@@ -179,7 +179,7 @@
                                             <div>
                                                 <small style="color: #835845">Ceremonia religiosa
                                                     <br>
-                                                    <span style="font-size: 80%">17:00 horas</span>
+                                                    <span style="font-size: 80%">16:00 horas</span>
                                                 </small>
                                             </div>
                                             <p>
@@ -200,7 +200,7 @@
                                             <div>
                                                 <small style="color: #835845">Recepción
                                                     <br>
-                                                    <span style="font-size: 80%">19:30 horas</span>
+                                                    <span style="font-size: 80%">19:00 horas</span>
                                                 </small>
                                             </div>
                                             <p>
