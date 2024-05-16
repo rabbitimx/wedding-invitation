@@ -159,7 +159,7 @@
                                                     border: 1px solid #835845;
                                                     padding: 0.5rem;"
                                                     name="passes_confirmed" id="passes_confirmed">
-                                                    <option value="null" selected disabled>Seleccionar...
+                                                    <option value="" selected disabled>Seleccionar...
                                                     </option>
                                                     @for ($i = 0; $i < $invitation->passes_total; $i++)
                                                         <option class="text-center" value="{{ $i + 1 }}">
