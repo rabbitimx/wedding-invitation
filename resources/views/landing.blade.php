@@ -135,14 +135,17 @@
                                             <div class="mb-2">
                                                 <label for="passes_confirmed">Número de boletos</label>
                                             </div>
-                                            <select class="mb-3" readonly required
+                                            <select class="mb-3" readonly
                                                 style="width: 100%;
                                                 border: 1px solid #835845;
                                                 padding: 0.5rem;"
                                                 name="passes_confirmed" id="passes_confirmed">
-                                                <option selected disabled class="text-center">{{ $invitation->passes_confirmed }} boleto{{ $invitation->passes_confirmed > 1 ? 's' : '' }}</option>
+                                                <option selected disabled class="text-center">
+                                                    {{ $invitation->passes_confirmed }}
+                                                    boleto{{ $invitation->passes_confirmed > 1 ? 's' : '' }}</option>
                                             </select>
-                                            <button style="width: 100%" disabled class="theme-btn">¡Gracias por confirmar!</button>
+                                            <button style="width: 100%" disabled class="theme-btn">¡Gracias por
+                                                confirmar!</button>
                                         </div>
                                     @else
                                         <form method="POST">
@@ -151,7 +154,7 @@
                                                 <div class="mb-2">
                                                     <label for="passes_confirmed">Número de boletos</label>
                                                 </div>
-                                                <select class="mb-3"
+                                                <select class="mb-3" required
                                                     style="width: 100%;
                                                     border: 1px solid #835845;
                                                     padding: 0.5rem;"
