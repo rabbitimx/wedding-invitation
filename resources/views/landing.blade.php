@@ -117,27 +117,57 @@
                                     <h1 style="font-size: 4.5rem">{{ $invitation->envelope_name }}</h1>
                                 </div>
                                 <div class="mx-auto text-center mb-5" style="max-width: 600px">
-                                    <p class="mb-4">Como muestra de nuestro aprecio y amor por ustedes, nos complace
+                                    <p class="mb-4 px-3">Como muestra de nuestro aprecio y amor por ustedes, nos complace
                                         otorgarles
-                                        <b style="color: #835845">{{ $invitation->passes }} boletos</b> para este día de
+                                        <b style="color: #835845">{{ $invitation->passes_total }} boletos</b> para este día de
                                         celebración.
                                     </p>
 
-                                    <p class="mb-5">Estamos muy emocionados por compartir a su lado momentos de alegría y
+                                    <p class="mb-5 px-3">Estamos muy emocionados por compartir a su lado momentos de alegría y
                                         conexión mientras
                                         marcamos el inicio de nuestra nueva vida juntos. Su presencia significa mucho para
                                         nosotros, y esperamos sinceramente que se sumen a nuestra celebración mientras unimos
                                         nuestras vidas en matrimonio.
                                     </p>
 
-                                    <form method="POST">
-                                        @csrf
-                                        @if ($invitation->is_confirmed > 0)
-                                            <button disabled class="theme-btn">¡Gracias por confirmar!</button>
-                                        @else
-                                            <button class="theme-btn">Confirmar asistencia</button>
-                                        @endif
-                                    </form>
+                                    @if ($invitation->is_confirmed > 0)
+                                        <div class="mb-3 mx-auto text-left" style="width: 100%; max-width: 400px">
+                                            <div class="mb-2">
+                                                <label for="passes_confirmed">Número de boletos</label>
+                                            </div>
+                                            <select class="mb-3" readonly
+                                                style="width: 100%;
+                                                border: 1px solid #835845;
+                                                padding: 0.5rem;"
+                                                name="passes_confirmed" id="passes_confirmed">
+                                                <option selected disabled class="text-center">{{ $invitation->passes_confirmed }} boleto{{ $invitation->passes_confirmed > 1 ? 's' : '' }}</option>
+                                            </select>
+                                            <button style="width: 100%" disabled class="theme-btn">¡Gracias por confirmar!</button>
+                                        </div>
+                                    @else
+                                        <form method="POST">
+                                            @csrf
+                                            <div class="mb-3 mx-auto text-left" style="width: 100%; max-width: 400px">
+                                                <div class="mb-2">
+                                                    <label for="passes_confirmed">Número de boletos</label>
+                                                </div>
+                                                <select class="mb-3"
+                                                    style="width: 100%;
+                                                    border: 1px solid #835845;
+                                                    padding: 0.5rem;"
+                                                    name="passes_confirmed" id="passes_confirmed">
+                                                    <option value="null" selected disabled>Seleccionar...
+                                                    </option>
+                                                    @for ($i = 0; $i < $invitation->passes_total; $i++)
+                                                        <option class="text-center" value="{{ $i + 1 }}">
+                                                            {{ $i + 1 }} boleto{{ $i >= 1 ? 's' : '' }}
+                                                        </option>
+                                                    @endfor
+                                                </select>
+                                                <button style="width: 100%" class="theme-btn">Confirmar asistencia</button>
+                                            </div>
+                                        </form>
+                                    @endif
                                 </div>
                                 <div class="wpo-event-text">
                                     <ul>

@@ -152,7 +152,7 @@
                         <tr>
                             <td>{{ $invitation->invited_by }}</td>
                             <td>{{ $invitation->envelope_name }}</td>
-                            <td>{{ $invitation->passes }}</td>
+                            <td>{{ $invitation->passes_total }}</td>
                             <td>{{ $invitation->is_confirmed ? 'SÍ' : 'NO' }}</td>
                             <td>
                                 <span style="font-family: monospace !important; font-size: 80%">{{ $invitation->confirmed_at }}</span>

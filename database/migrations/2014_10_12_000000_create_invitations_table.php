@@ -16,7 +16,8 @@ return new class extends Migration
             $table->char('key', 8)->unique();
             $table->enum('invited_by', ['ALFREDO', 'DULCE']);
             $table->string('envelope_name');
-            $table->unsignedInteger('passes');
+            $table->unsignedInteger('passes_total');
+            $table->unsignedInteger('passes_confirmed')->nullable();
             $table->boolean('is_confirmed')->default(0);
             $table->dateTime('confirmed_at')->nullable();
             $table->timestamps();
