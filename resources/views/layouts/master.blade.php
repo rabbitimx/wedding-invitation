@@ -119,7 +119,7 @@
     </style>
 </head>
 
-<body>
+<body class="color2">
     @yield('content')
 
 
