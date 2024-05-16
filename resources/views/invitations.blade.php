@@ -145,6 +145,7 @@
                         <th>Confirmado</th>
                         <th>Fecha de confirmación</th>
                         <th>Compartir</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -163,7 +164,8 @@
                                         style="font-family: monospace !important; font-size: 60%">{{ route('invitation', $invitation->key) }}
                                     </span>
                                 </a>
-                                &nbsp;
+                            </td>
+                            <td>
                                 <span onclick="copyToClipboard('{{ $invitation->key }}')" style="cursor: pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14" fill="#444">
                                         <path
