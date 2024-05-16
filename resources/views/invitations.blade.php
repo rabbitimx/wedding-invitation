@@ -141,7 +141,6 @@
                     <tr>
                         <th>Quien invita</th>
                         <th>Invitado</th>
-                        <th>Boletos asignados</th>
                         <th>Boletos confirmados</th>
                         <th>Confirmado</th>
                         <th>Fecha de confirmación</th>
@@ -154,8 +153,7 @@
                         <tr>
                             <td>{{ $invitation->invited_by }}</td>
                             <td>{{ $invitation->envelope_name }}</td>
-                            <td>{{ $invitation->passes_total }}</td>
-                            <td>{{ $invitation->passes_confirmed }}</td>
+                            <td>{{ $invitation->passes_confirmed ?? 0 }}/{{ $invitation->passes_total }}</td>
                             <td>{{ $invitation->is_confirmed ? 'SÍ' : 'NO' }}</td>
                             <td>
                                 <span style="font-family: monospace !important; font-size: 80%">{{ $invitation->confirmed_at }}</span>
