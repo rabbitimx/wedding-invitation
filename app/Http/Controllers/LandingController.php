@@ -85,7 +85,7 @@ class LandingController extends Controller
     {
         $confirmed = Invitation::where('is_confirmed', 1)->get();
         $confirmed_count = $confirmed->count();
-        $confirmed_passes = $confirmed->sum('passes_total');
+        $confirmed_passes = $confirmed->sum('passes_confirmed');
 
         $invitations = Invitation::orderBy('invited_by')->orderBy('envelope_name')->get();
         $invitations_count = $invitations->count();
