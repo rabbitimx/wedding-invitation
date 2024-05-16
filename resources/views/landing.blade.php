@@ -135,7 +135,7 @@
                                             <div class="mb-2">
                                                 <label for="passes_confirmed">Número de boletos</label>
                                             </div>
-                                            <select class="mb-3" readonly
+                                            <select class="mb-3" readonly required
                                                 style="width: 100%;
                                                 border: 1px solid #835845;
                                                 padding: 0.5rem;"
