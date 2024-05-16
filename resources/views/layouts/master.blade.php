@@ -11,6 +11,8 @@
     <meta property="og:type" content="website">
 
     <title>Invitación | Dulce Campos y Alfredo Espejel</title>
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <link href="{{ asset('habibi/css/themify-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('habibi/css/font-awesome.min.css') }}" rel="stylesheet">
