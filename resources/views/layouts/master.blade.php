@@ -122,7 +122,6 @@
 <body class="color2">
     @yield('content')
 
-
     <!-- All JavaScript files
     ================================================== -->
     <script src="{{ asset('habibi/js/jquery.min.js') }}"></script>
@@ -135,6 +134,9 @@
     <!-- Custom script for this template -->
     <script src="{{ asset('habibi/js/script.js') }}"></script>
 
+    <script>
+        document.body.classList.add('color2');
+    </script>
     @yield('scripts')
 </body>
 
