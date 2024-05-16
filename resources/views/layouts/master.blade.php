@@ -11,8 +11,8 @@
     <meta property="og:type" content="website">
 
     <title>Invitación | Dulce Campos y Alfredo Espejel</title>
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
     <link href="{{ asset('habibi/css/themify-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('habibi/css/font-awesome.min.css') }}" rel="stylesheet">
@@ -105,10 +105,12 @@
                 right: -120px;
             }
         }
+
         .color2 .wpo-invitation-area .wpo-invitation-wrap .wpo-event-text ul li a::before,
         .wpo-invitation-area .wpo-invitation-wrap .wpo-event-text ul li a::before {
             background: none;
         }
+
         .color2 .wpo-invitation-area .wpo-invitation-wrap .wpo-event-text ul li a,
         .wpo-invitation-area .wpo-invitation-wrap .wpo-event-text ul li a {
             color: inherit !important;
