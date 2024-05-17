@@ -432,7 +432,7 @@
                                 <div class="wpo-invitation-wrap p-0">
                                     <div class="wpo-invitation-inner-item">
                                         <div class="wpo-invitation-inner" style="padding: 3rem 0;">
-                                            <h3 class="mb-3">Padrinos de harras</h3>
+                                            <h3 class="mb-3">Padrinos de arras</h3>
                                             <p class="m-0">Lilia L. Espejel Hernández</p>
                                             <p class="m-0">José L. Espejel Hernández</p>
                                         </div>
